@@ -2,7 +2,7 @@
 
 namespace Omnipay\Braintree\Message;
 
-use Braintree_Gateway;
+use Braintree\Gateway as Braintree_Gateway;
 use Omnipay\Common\Http\ClientInterface;
 use Omnipay\Common\Exception\InvalidRequestException;
 use Symfony\Component\HttpFoundation\Request as HttpRequest;
