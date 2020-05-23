@@ -4,7 +4,7 @@ namespace Omnipay\Braintree;
 
 use Omnipay\Common\AbstractGateway;
 use Braintree_Gateway;
-use Braintree_Configuration;
+use Braintree\Configuration;
 use Omnipay\Common\Http\ClientInterface;
 use Symfony\Component\HttpFoundation\Request as HttpRequest;
 /**
@@ -26,7 +26,7 @@ class Gateway extends AbstractGateway
      */
     public function __construct(ClientInterface $httpClient = null, HttpRequest $httpRequest = null, Braintree_Gateway $braintree = null)
     {
-        $this->braintree = $braintree ?: Braintree_Configuration::gateway();
+        $this->braintree = $braintree ?: Configuration::gateway();
 
         parent::__construct($httpClient, $httpRequest);
     }
